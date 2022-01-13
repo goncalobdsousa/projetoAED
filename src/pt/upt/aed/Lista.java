@@ -6,8 +6,16 @@ public class Lista {
     private Contato first;
     private Contato last;
 
+    /**
+     *
+     */
     public Lista() {}
 
+    /**
+     * @param name
+     * @param birthDate
+     * @param numStr
+     */
     public void insert(String name, Date birthDate, String numStr) {
         Contato newContato = new Contato(name, birthDate, numStr);
         if(first == null) {
@@ -33,6 +41,10 @@ public class Lista {
         }
     }
 
+    /**
+     * @param numStr
+     * @return
+     */
     public Contato search(String numStr) {
         if(first != null) {
             if(first.getNum().equals(numStr)) {
@@ -50,6 +62,10 @@ public class Lista {
         return null;
     }
 
+    /**
+     * @param numStr
+     * @return
+     */
     public Contato remove(String numStr) {
         Contato temp = search(numStr);
         if(temp != null) {

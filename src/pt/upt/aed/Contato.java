@@ -73,6 +73,9 @@ public class Contato {
     }
 
 
+    /**
+     * @return
+     */
     @Override
     public String toString() {
         SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");

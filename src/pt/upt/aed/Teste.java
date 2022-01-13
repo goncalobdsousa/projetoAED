@@ -8,11 +8,17 @@ import java.util.Scanner;
 public class Teste {
     private static Lista [] array;
 
+    /**
+     * @param args
+     */
     public static void main(String[] args) {
         array = new Lista[999];
         menu();
     }
 
+    /**
+     *
+     */
     @SuppressWarnings("resource")
     public static void menu() {
         Scanner inputInt = new Scanner(System.in);
@@ -113,10 +119,18 @@ public class Teste {
         }
     }
 
+    /**
+     * @param numStr
+     * @return
+     */
     private static int toHash(String numStr) {
         return Integer.parseInt(numStr.substring(numStr.length()-3));
     }
 
+    /**
+     * @param birthDate
+     * @return
+     */
     private static boolean isDate(String birthDate) {
         SimpleDateFormat dateInput = new SimpleDateFormat("dd/MM/yyyy");
         try
@@ -131,6 +145,10 @@ public class Teste {
 
     }
 
+    /**
+     * @param str
+     * @return
+     */
     private static boolean isNumeric(String str){
         return str != null && str.matches("[0-9.]+");
     }
