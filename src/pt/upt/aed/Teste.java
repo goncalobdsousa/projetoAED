@@ -9,7 +9,9 @@ public class Teste {
     private static Lista [] array;
 
     /**
-     * @param args
+     * Mét
+     *
+     * @param args //
      */
     public static void main(String[] args) {
         array = new Lista[999];
@@ -17,6 +19,7 @@ public class Teste {
     }
 
     /**
+     * Método que mostra o menu e executa
      *
      */
     @SuppressWarnings("resource")
