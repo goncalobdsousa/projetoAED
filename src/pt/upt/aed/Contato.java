@@ -11,6 +11,11 @@ public class Contato {
     private Contato prev;
 
 
+    /**
+     * @param name
+     * @param birthDate
+     * @param numStr
+     */
     public Contato(String name, Date birthDate, String numStr) {
         this.name = name;
         this.birthDate = birthDate;
@@ -18,30 +23,51 @@ public class Contato {
     }
 
 
+    /**
+     * @return
+     */
     public Contato getPrev() {
         return prev;
     }
 
+    /**
+     * @param prev
+     */
     public void setPrev(Contato prev) {
         this.prev = prev;
     }
 
+    /**
+     * @return
+     */
     public Contato getNext() {
         return next;
     }
 
+    /**
+     * @param next
+     */
     public void setNext(Contato next) {
         this.next = next;
     }
 
+    /**
+     * @return
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * @return
+     */
     public Date getBirthDate() {
         return birthDate;
     }
 
+    /**
+     * @return
+     */
     public String getNum() {
         return numStr;
     }
