@@ -12,6 +12,8 @@ public class Contato {
 
 
     /**
+     * Construtor do objeto Contato.
+     *
      * @param name
      * @param birthDate
      * @param numStr
@@ -24,6 +26,8 @@ public class Contato {
 
 
     /**
+     * Retorna o objeto do tipo Contato anterior.
+     *
      * @return
      */
     public Contato getPrev() {
@@ -31,6 +35,8 @@ public class Contato {
     }
 
     /**
+     * Altera o objeto anterior do tipo Contato.
+     *
      * @param prev
      */
     public void setPrev(Contato prev) {
@@ -38,6 +44,8 @@ public class Contato {
     }
 
     /**
+     * Retorna o objeto do tipo Contato seguinte.
+     *
      * @return
      */
     public Contato getNext() {
@@ -45,6 +53,8 @@ public class Contato {
     }
 
     /**
+     * Altera o próximo objeto Contato.
+     *
      * @param next
      */
     public void setNext(Contato next) {
@@ -52,6 +62,8 @@ public class Contato {
     }
 
     /**
+     * Retorna nome do objeto Contato.
+     *
      * @return
      */
     public String getName() {
@@ -59,6 +71,8 @@ public class Contato {
     }
 
     /**
+     * Retorna a data do objeto Contato.
+     *
      * @return
      */
     public Date getBirthDate() {
@@ -66,6 +80,8 @@ public class Contato {
     }
 
     /**
+     * Retorna o número de telemóvel do objeto Contato.
+     *
      * @return
      */
     public String getNum() {
@@ -74,6 +90,8 @@ public class Contato {
 
 
     /**
+     *  Método toString para imprimir detalhes do objeto Contato.
+     *
      * @return
      */
     @Override
