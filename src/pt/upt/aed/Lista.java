@@ -7,11 +7,14 @@ public class Lista {
     private Contato last;
 
     /**
-     *
+     * Construtor do Objeto Lista.
      */
     public Lista() {}
 
     /**
+     * Cria e insere um novo objeto do tipo Contato numa lista ornedada de forma crescente com base na comparação dos números de telemovel da string dos objetos Contato
+     * , o método verifica em que posição inserir, seja inicio, meio ou fim.
+     *
      * @param name
      * @param birthDate
      * @param numStr
@@ -42,6 +45,8 @@ public class Lista {
     }
 
     /**
+     * Pesquisa um objeto Contato com base no número de telemóvel.
+     *
      * @param numStr
      * @return
      */
@@ -63,6 +68,8 @@ public class Lista {
     }
 
     /**
+     * Remove e retorna um objeto Contato com base no número de telemóvel.
+     *
      * @param numStr
      * @return
      */
