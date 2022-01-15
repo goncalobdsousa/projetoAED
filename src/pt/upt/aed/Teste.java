@@ -119,6 +119,7 @@ public class Teste {
 
     /**
      * Este método recebe uma string e converte para int, extrai os seus 3 ultimos digitos e retorna o valor como inteiro.
+     *
      * @param numStr Número de telemóvel em string.
      * @return 3 últimos digitos do número de telemóvel.
      */
@@ -145,6 +146,8 @@ public class Teste {
     }
 
     /**
+     * Este método verifica se uma string é númerica.
+     *
      * @param str Texto a analisar.
      * @return Verdadeiro ou False consoante se a string é númerica.
      */
