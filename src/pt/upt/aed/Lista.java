@@ -15,9 +15,9 @@ public class Lista {
      * Cria e insere um novo objeto do tipo Contato numa lista ornedada de forma crescente com base na comparação dos números de telemovel da string dos objetos Contato
      * , o método verifica em que posição inserir, seja inicio, meio ou fim.
      *
-     * @param name
-     * @param birthDate
-     * @param numStr
+     * @param name Nome do Contato.
+     * @param birthDate Data de Nascimento do Contato.
+     * @param numStr Número de Telemóvel formato String.
      */
     public void insert(String name, Date birthDate, String numStr) {
         Contato newContato = new Contato(name, birthDate, numStr);
@@ -47,8 +47,8 @@ public class Lista {
     /**
      * Pesquisa um objeto Contato com base no número de telemóvel.
      *
-     * @param numStr
-     * @return
+     * @param numStr Número de Telemóvel formato String.
+     * @return Objeto Procurado.
      */
     public Contato search(String numStr) {
         if(first != null) {
@@ -70,8 +70,8 @@ public class Lista {
     /**
      * Remove e retorna um objeto Contato com base no número de telemóvel.
      *
-     * @param numStr
-     * @return
+     * @param numStr Número de Telemóvel formato String.
+     * @return Objeto Contato Removido.
      */
     public Contato remove(String numStr) {
         Contato temp = search(numStr);
