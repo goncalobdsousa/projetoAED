@@ -61,23 +61,6 @@ public class Contato {
         this.next = next;
     }
 
-    /**
-     * Retorna nome do objeto Contato.
-     *
-     * @return
-     */
-    public String getName() {
-        return name;
-    }
-
-    /**
-     * Retorna a data do objeto Contato.
-     *
-     * @return
-     */
-    public Date getBirthDate() {
-        return birthDate;
-    }
 
     /**
      * Retorna o número de telemóvel do objeto Contato.

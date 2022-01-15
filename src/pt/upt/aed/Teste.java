@@ -9,7 +9,7 @@ public class Teste {
     private static Lista [] array;
 
     /**
-     * Mét
+     * Main
      *
      * @param args //
      */
@@ -19,8 +19,7 @@ public class Teste {
     }
 
     /**
-     * Método que mostra o menu e executa
-     *
+     * Método que mostra o menu e executa-o.
      */
     @SuppressWarnings("resource")
     public static void menu() {
@@ -36,7 +35,7 @@ public class Teste {
 
         if(escolha != 0) {
             switch (escolha) {
-                case 1: {
+                case 1 -> {
                     System.out.print("Insira o nome do cliente: ");
                     String name = inputStr.nextLine();
 
@@ -45,7 +44,7 @@ public class Teste {
                     SimpleDateFormat dateInput = new SimpleDateFormat("dd/MM/yyyy");
                     Date newDate = null;
 
-                    while(!isDate(birthDate)) {
+                    while (!isDate(birthDate)) {
                         System.out.println("Data invalida!");
                         System.out.print("Insira a data de nascimento (dd/mm/aaaa): ");
                         birthDate = inputStr.nextLine();
@@ -60,79 +59,76 @@ public class Teste {
                     System.out.print("Insira o número de telemóvel: ");
                     String numStr = inputStr.next();
 
-                    while(!isNumeric(numStr)) {
+                    while (!isNumeric(numStr)) {
                         System.out.println("Erro (Não é um número)!");
                         System.out.print("Insira o número de telemóvel: ");
                         numStr = inputStr.next();
                     }
 
                     int hashCode = toHash(numStr);
-                    if(array[hashCode] == null) {
+                    if (array[hashCode] == null) {
                         array[hashCode] = new Lista();
                     }
                     array[hashCode].insert(name, newDate, numStr);
-                    break;
                 }
-                case 2:{
+                case 2 -> {
                     System.out.print("Insira o número de telemóvel do cliente a procurar: ");
                     String numStr = inputStr.next();
 
-                    while(!isNumeric(numStr)) {
+                    while (!isNumeric(numStr)) {
                         System.out.println("Erro (Não é um número)!");
                         System.out.print("Insira o número de telemóvel do cliente a procurar: ");
                         numStr = inputStr.next();
                     }
 
                     int hashCode = toHash(numStr);
-                    if(array[hashCode] != null) {
+                    if (array[hashCode] != null) {
                         Contato temp = array[hashCode].search(numStr);
-                        if(temp != null) {
+                        if (temp != null) {
                             System.out.println(temp);
-                        }else {
+                        } else {
                             System.out.println("Número não existe");
                         }
 
                     } else {
                         System.out.println("Número não existe");
                     }
-                    break;
                 }
-                case 3: {
+                case 3 -> {
                     System.out.println("Insira o número de telemóvel do cliente a remover: ");
                     String numStr = inputStr.next();
 
-                    while(!isNumeric(numStr)) {
+                    while (!isNumeric(numStr)) {
                         System.out.println("Erro (Não é um número)!");
                         System.out.print("Insira o número de telemóvel: ");
                         numStr = inputStr.next();
                     }
 
                     int hashCode = toHash(numStr);
-                    if(array[hashCode] != null) {
+                    if (array[hashCode] != null) {
                         System.out.println(array[hashCode].remove(numStr));
                     } else {
                         System.out.println("Número não existe");
                     }
-                    break;
                 }
-                default:
-                    System.out.println("A opção escolhida não existe");
+                default -> System.out.println("A opção escolhida não existe");
             }
             menu();
         }
     }
 
     /**
-     * @param numStr
-     * @return
+     * Este método recebe uma string e converte para int, extrai os seus 3 ultimos digitos e retorna o valor como inteiro.
+     * @param numStr Número de telemóvel em string.
+     * @return 3 últimos digitos do número de telemóvel.
      */
     private static int toHash(String numStr) {
         return Integer.parseInt(numStr.substring(numStr.length()-3));
     }
 
     /**
-     * @param birthDate
-     * @return
+     * @param birthDate Data de aniversário em String.
+     * @return Data de aniversário em formato "dd/MM/yyyy".
      */
     private static boolean isDate(String birthDate) {
         SimpleDateFormat dateInput = new SimpleDateFormat("dd/MM/yyyy");
@@ -149,8 +145,8 @@ public class Teste {
     }
 
     /**
-     * @param str
-     * @return
+     * @param str Texto a analisar.
+     * @return Verdadeiro ou False consoante se a string é númerica.
      */
     private static boolean isNumeric(String str){
         return str != null && str.matches("[0-9.]+");
