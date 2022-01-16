@@ -51,17 +51,20 @@ public class Lista {
      * @return Objeto Procurado.
      */
     public Contato search(String numStr) {
-        if(first != null) {
+        if(first != null && first.getNum().compareTo(numStr)<=0 && last.getNum().compareTo(numStr)>=0) {
             if(first.getNum().equals(numStr)) {
                 return first;
             } else if(last.getNum().equals(numStr)) {
                 return last;
             } else {
                 Contato temp = first;
-                while(temp != null && !temp.getNum().equals(numStr)) {
+                while(temp != null && !temp.getNum().equals(numStr) && temp.getNum().compareTo(numStr)<0) {
                     temp = temp.getNext();
                 }
-                return temp;
+                if(temp!= null && temp.getNum().equals(numStr)){
+                    return temp;
+                }
+                return null;
             }
         }
         return null;

@@ -65,11 +65,19 @@ public class Teste {
                         numStr = inputStr.next();
                     }
 
+
                     int hashCode = toHash(numStr);
                     if (array[hashCode] == null) {
                         array[hashCode] = new Lista();
+                        array[hashCode].insert(name, newDate, numStr);
+                    } else{
+                        System.out.println("Procura: "+ array[hashCode].search(numStr));
+                        if(array[hashCode].search(numStr) != null) {
+                            System.out.println("Erro (Número já existe!)");
+                        } else{
+                            array[hashCode].insert(name, newDate, numStr);
+                        }
                     }
-                    array[hashCode].insert(name, newDate, numStr);
                 }
                 case 2 -> {
                     System.out.print("Insira o número de telemóvel do cliente a procurar: ");
