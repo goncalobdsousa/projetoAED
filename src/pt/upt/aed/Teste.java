@@ -71,7 +71,6 @@ public class Teste {
                         array[hashCode] = new Lista();
                         array[hashCode].insert(name, newDate, numStr);
                     } else{
-                        System.out.println("Procura: "+ array[hashCode].search(numStr));
                         if(array[hashCode].search(numStr) != null) {
                             System.out.println("Erro (Número já existe!)");
                         } else{
@@ -114,9 +113,14 @@ public class Teste {
 
                     int hashCode = toHash(numStr);
                     if (array[hashCode] != null) {
-                        System.out.println(array[hashCode].remove(numStr));
+                        Contato temp = array[hashCode].remove(numStr);
+                        if(temp != null) {
+                            System.out.println("A remover : (" + temp + ")");
+                        } else {
+                            System.out.println("Número não existe!");
+                        }
                     } else {
-                        System.out.println("Número não existe");
+                        System.out.println("Número não existe!");
                     }
                 }
                 default -> System.out.println("A opção escolhida não existe");
